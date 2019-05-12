@@ -156,6 +156,9 @@ func main() {
 	if shouldDisplay() {
 		b := new(Book)
 		b.ReadFromFile()
+		if len(b.Name) == 0 {
+			return
+		}
 		fmt.Print(b)
 	}
 }
